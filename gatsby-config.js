@@ -7,7 +7,7 @@ const theme = require("./src/gatsby-plugin-theme-ui/index.js")
 module.exports = {
   siteMetadata: {
     title: "Roger M. Parent",
-    siteUrl: "https://rmp-portfolio.netlify.com",
+    siteUrl: "https://rmp-portfolio.netlify.com/",
     description: "A website for RMP's portfolio.",
     author: "Roger M. Parent",
   },
@@ -29,8 +29,8 @@ module.exports = {
         name: `Roger M. Parent: Portfolio`,
         short_name: `Roger M. Parent`,
         start_url: `/`,
-        background_color: theme.background,
-        theme_color: theme.primary,
+        background_color: theme.colors.background,
+        theme_color: theme.colors.primary,
         display: `minimal-ui`,
         icon: `assets/icon.png`, // This path is relative to the root of the site.
       },
