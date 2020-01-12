@@ -18,18 +18,11 @@ import Img from "gatsby-image"
 const Projects = () => {
   const query = useStaticQuery(graphql`
     query ProjectImages {
-      allFile(
-        filter: {
-          sourceInstanceName: { eq: "assets" }
-          relativePath: {
-            in: ["platinum-blog.png", "platinum-demo.png", "recipe-book.png"]
-          }
-        }
-      ) {
+      allFile(filter: {sourceInstanceName: {eq: "assets"}, relativePath: {in: ["platinum-blog.png", "platinum-demo.png", "recipe-book.png"]}}) {
         nodes {
           relativePath
           childImageSharp {
-            fluid(maxWidth: 600) {
+            fluid(maxWidth: 550) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
