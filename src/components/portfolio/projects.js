@@ -29,7 +29,7 @@ const Projects = () => {
         nodes {
           relativePath
           childImageSharp {
-            fluid(maxWidth: 300) {
+            fluid(maxWidth: 600) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
