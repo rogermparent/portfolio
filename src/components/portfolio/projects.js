@@ -156,6 +156,7 @@ const Projects = () => {
               as="a"
               variant="elevated"
               href="https://github.com/rogermparent/portfolio"
+              target="_blank"
               sx={{
                 fontSize: [1, 2],
               }}
@@ -247,8 +248,8 @@ const Project = ({ children, name, image, repo, demo }) => (
             a: { mx: 1 },
           }}
         >
-          {repo && <Link href={repo}>source</Link>}
-          {demo && <Link href={demo}>demo</Link>}
+          {repo && <Link href={repo} target="_blank">source</Link>}
+          {demo && <Link href={demo} target="_blank">demo</Link>}
         </Flex>
       </Box>
     </Box>
