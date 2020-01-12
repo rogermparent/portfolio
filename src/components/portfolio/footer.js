@@ -4,7 +4,7 @@ import { Box, Text, Container, Heading, Link } from "@theme-ui/components"
 
 const PortfolioFooter = () => {
   return (
-    <Box>
+    <Box id="contact">
       <Container
         sx={{
           my: 6,
