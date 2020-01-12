@@ -96,6 +96,14 @@ const Skills = () => {
         </Paragraph>
       </Skill>
 
+      <Skill heading="Git">
+        <Paragraph>
+          A necessary skill for all developers! I have a good grasp of both
+          Git's fundamentals as well as some slightly more advanced operations
+          like branch workflow and rebasing.
+        </Paragraph>
+      </Skill>
+
       <Skill heading="Linux Administration">
         <Paragraph>
           I've used various flavors of linux since I was young, from Ubuntu and
