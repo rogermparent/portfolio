@@ -95,6 +95,9 @@ module.exports = {
       display: "flex",
       flexFlow: "column nowrap",
       minWidth: "320px",
+      "@media print": {
+        display: "block",
+      },
     },
   },
 }

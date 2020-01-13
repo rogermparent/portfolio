@@ -17,6 +17,9 @@ const Intro = () => (
       flexFlow: "column nowrap",
       alignItems: "flex-start",
       justifyContent: "center",
+      "@media print": {
+        minHeight: "unset",
+      },
     }}
   >
     <Text>My name is</Text>
