@@ -7,7 +7,7 @@ const Intro = () => (
   <Section
     id="intro"
     sx={{
-      height: "100vh",
+      minHeight: "100vh",
       fontSize: [2, 3],
       lineHeight: "tight",
       color: "text",
