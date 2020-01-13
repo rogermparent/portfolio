@@ -161,6 +161,7 @@ const Projects = () => {
             as="a"
             variant="elevated"
             href="https://github.com/rogermparent/portfolio"
+            rel="noopener noreferrer"
             target="_blank"
             sx={{
               fontSize: [1, 2],
@@ -216,12 +217,12 @@ const Project = ({ children, name, image, repo, demo }) => (
           }}
         >
           {repo && (
-            <Link href={repo} target="_blank">
+            <Link href={repo} target="_blank" rel="noopener noreferrer">
               source
             </Link>
           )}
           {demo && (
-            <Link href={demo} target="_blank">
+            <Link href={demo} target="_blank" rel="noopener noreferrer">
               demo
             </Link>
           )}
