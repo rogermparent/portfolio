@@ -13,9 +13,10 @@ const Skills = () => {
   return (
     <Section
       id="skills"
-      childProps={{
+      containerProps={{
         sx: {
-          my: 5,
+          mt: 5,
+          mb: [5, 6],
         },
       }}
     >
