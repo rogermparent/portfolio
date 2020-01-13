@@ -7,7 +7,7 @@ const theme = require("./src/gatsby-plugin-theme-ui/index.js")
 module.exports = {
   siteMetadata: {
     title: "Roger M. Parent",
-    siteUrl: "https://rmp-portfolio.netlify.com/",
+    siteUrl: "https://www.rogermparent.com/",
     description: "A website for RMP's portfolio.",
     author: "Roger M. Parent",
   },
