@@ -60,7 +60,7 @@ const Projects = () => {
       <Heading
         sx={{
           fontSize: [5, 6],
-          my: [4, 5],
+          my: 5,
         }}
       >
         Things I've Made
@@ -134,14 +134,37 @@ const Projects = () => {
             },
           }}
         >
-          <DetailItem heading="Serverless">
+          <DetailItem heading="Modern">
+            Despite compiling to static HTML and CSS, this site is made with
+            modern tools like React and Gatsby.js. It's a blend of the
+            advantages of both static and dynamic!
+          </DetailItem>
+          <DetailItem heading="Reliable">
             <Paragraph>
-              This, like most of my other sites, costs $0 to host!
+              Since it doesn't rely on a server, this site stands rock-solid in
+              the face of both heavy traffic and hack attempts while also
+              costing $0 to host!
             </Paragraph>
           </DetailItem>
           <DetailItem heading="SEO Ready">
             <Paragraph>
-              This site gets at nearly perfect Google Lighthouse scores.
+              This site gets near-perfect scores on Google's{" "}
+              <Link
+                href="https://developers.google.com/web/tools/lighthouse#devtools"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Lighthouse audit
+              </Link>
+              and{" "}
+              <Link
+                href="https://developers.google.com/speed/pagespeed/insights/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                PageSpeed Insights
+              </Link>
+              .
             </Paragraph>
           </DetailItem>
           <DetailItem heading="Scalable">

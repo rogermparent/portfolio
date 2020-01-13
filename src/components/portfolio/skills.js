@@ -33,29 +33,39 @@ const Skills = () => {
       <Box my={[5, 6]}>
         <Skill heading="HTML5 and CSS3">
           <Paragraph>
-            The first software languages I learned, what everything on the
-            internet starts and ends with. I've experienced and learned from
-            many website trends, and these days I like to focus on semantic HTML
-            and efficient, backward-compatible CSS.
+            I've experienced and learned from many website trends, and these
+            days I like to focus on semantic HTML, backward-compatible CSS, and
+            progressive enhancement.
           </Paragraph>
         </Skill>
 
         <Skill heading="Gatsby.js">
           <Paragraph>
-            I absolutely love this framework, and that admiration has only
-            increased in the two years I've been studying it- to the point where
-            I even decided to make this portfolio with it! If you don't know
-            about Gatsby, I invite you to{" "}
-            <Link href="https://www.gatsbyjs.org/">check it out</Link>! Gatsby
-            features React.js, GraphQL, and the{" "}
-            <Link href="https://jamstack.org/">JAMstack</Link>, so I've been
-            learning three of the biggest modern web technologies at the same
-            time!
+            I absolutely love this framework, to the point where I even decided
+            to make this portfolio with it! If you don't know about Gatsby, I
+            invite you to{" "}
+            <Link
+              href="https://www.gatsbyjs.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              check it out
+            </Link>
+            ! Gatsby features React.js, GraphQL, and the{" "}
+            <Link
+              href="https://jamstack.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              JAMstack
+            </Link>
+            , so I've been learning three of the biggest modern web technologies
+            at the same time!
           </Paragraph>
           <Paragraph>
             Working with Gatsby, I can create websites that pull content from
             any source, feature custom dynamic user interaction, and easily get
-            perfect scores on Google's Lighthouse audit!
+            stellar scores on Google's Lighthouse audit!
           </Paragraph>
         </Skill>
 
@@ -75,7 +85,7 @@ const Skills = () => {
             like closures and callbacks.
           </Paragraph>
           <Paragraph>
-            Aside from the raw language, I'm also familiar with the more modern
+            Aside from the language, I'm also familiar with transpilation
             tooling like Webpack and Babel.
           </Paragraph>
         </Skill>
@@ -97,44 +107,33 @@ const Skills = () => {
 
         <Skill heading="Git">
           <Paragraph>
-            A necessary skill for all developers! I have a good grasp of both
-            Git's fundamentals as well as some slightly more advanced operations
-            like branch workflow and rebasing.
+            I have a good grasp of both Git's fundamentals as well as some
+            slightly more advanced operations like branch workflow and rebasing.
           </Paragraph>
         </Skill>
 
         <Skill heading="Linux Administration">
           <Paragraph>
-            I've used various flavors of linux since I was young, from Ubuntu
-            and Debian to Fedora and CentOS. I've used both SysVInit and SystemD
-            environments, most desktop environments, and <i>tons</i> of the
-            command line. Whether it be a webserver, database, or a humble
-            kiosk, I can find my way around it if it runs Linux.
+            I've used both SysVInit and SystemD environments, most desktop
+            environments, and <i>tons</i> of the command line. Whether it be a
+            webserver, database, or a humble kiosk, I can find my way around it
+            if it runs Linux.
           </Paragraph>
           <Paragraph>
             For anything I don't already have memorized, I know how to leverage
             "-h", man pages, and good ol' Google to learn it.
           </Paragraph>
-          <Paragraph>
-            While I won't directly be using Linux in most development projects,
-            It always helps to be familiar with the environment a project will
-            be deployed on!
-          </Paragraph>
         </Skill>
 
         <Skill heading="Communication">
           <Paragraph>
-            It's no secret that "soft skills" are an important part of every
-            job, including software development!
-          </Paragraph>
-          <Paragraph>
             While my previous jobs don't count much for my development skills,
             my time in retail let me develop the ability to profesionally
-            communicate with both customers and team members alike! I can fit
-            onto any team and get along with everybody.
+            communicate with both customers and team members. I can fit onto any
+            team and get along with everybody!
           </Paragraph>
           <Paragraph>
-            Not only can I get along with others, but I'm also good at breaking
+            Beyond simply getting along with others, I'm also good at breaking
             down technical concepts for laymen to understand. I do my best to
             keep jargon to a minimum and make sure everybody is up to speed!
           </Paragraph>
