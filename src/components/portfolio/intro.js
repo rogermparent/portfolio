@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import { Box, Container, Text, Link, Heading } from "@theme-ui/components"
+import { Box, Text, Link, Heading } from "@theme-ui/components"
 import { Paragraph, Section } from "./shared"
 
 const Intro = () => (

@@ -11,7 +11,7 @@ import {
   Link,
   Card,
 } from "@theme-ui/components"
-import { Paragraph, List, Section } from "./shared"
+import { Paragraph, List, Section, Detail } from "./shared"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
@@ -174,33 +174,16 @@ const Projects = () => {
   )
 }
 
-const DetailItem = ({ heading, children }) => (
-  <Box
-    as="details"
+const DetailItem = ({ sx, heading, ...props }) => (
+  <Detail
     sx={{
-      "& .content": {
-        position: "relative",
-      },
-      '&[open=""] .content': {
-        animation: "open 0.25s ease-out",
-      },
+      fontSize: 2,
+      mb: 2,
+      ...sx,
     }}
-  >
-    <Heading
-      as="summary"
-      sx={{
-        fontSize: 2,
-        mb: 2,
-      }}
-    >
-      {heading}
-    </Heading>
-    <Box sx={{ overflow: "hidden" }}>
-      <Box pl={[1, 3]} className="content">
-        {children}
-      </Box>
-    </Box>
-  </Box>
+    summary={heading}
+    {...props}
+  />
 )
 
 const Project = ({ children, name, image, repo, demo }) => (

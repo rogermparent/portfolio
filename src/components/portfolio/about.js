@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import { Box, Container, Heading } from "@theme-ui/components"
+import { Heading } from "@theme-ui/components"
 import { Paragraph, Section } from "./shared"
 
 const About = () => {

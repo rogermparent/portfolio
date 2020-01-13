@@ -1,6 +1,40 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import { Text, Box, Container } from "@theme-ui/components"
+import { Text, Box, Container, Heading } from "@theme-ui/components"
+
+export const Detail = ({
+  summary,
+  summaryProps,
+  summarySx,
+  sx,
+  contentProps,
+  contentSx,
+  children,
+  ...props
+}) => (
+  <Box
+    as="details"
+    sx={{
+      "& .content": {
+        "*": { position: "relative" },
+        overflow: "hidden",
+        ...contentSx,
+      },
+      '&[open=""] .content > *': {
+        animation: "open 0.25s ease-out",
+      },
+      ...sx,
+    }}
+    {...props}
+  >
+    <Heading as="summary" sx={summarySx} {...summaryProps}>
+      {summary}
+    </Heading>
+    <Box className="content" {...contentProps}>
+      <Box>{children}</Box>
+    </Box>
+  </Box>
+)
 
 export const Paragraph = props => (
   <Text

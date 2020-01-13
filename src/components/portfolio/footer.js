@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import { Box, Text, Container, Heading, Link } from "@theme-ui/components"
+import { Text, Heading, Link } from "@theme-ui/components"
 import { Section } from "./shared"
 
 const PortfolioFooter = () => {

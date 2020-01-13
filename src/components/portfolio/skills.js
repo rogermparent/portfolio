@@ -1,15 +1,12 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import { Box, Container, Heading, Link } from "@theme-ui/components"
-import { Paragraph, Section } from "./shared"
+import { Heading, Link } from "@theme-ui/components"
+import { Paragraph, Section, Detail } from "./shared"
 
 const Skill = ({ heading, children }) => (
-  <Box as="details" sx={{ my: 4 }}>
-    <Heading as="summary" sx={{ fontSize: [3, 4] }}>
-      {heading}
-    </Heading>
+  <Detail sx={{ my: 4 }} summarySx={{ fontSize: [3, 4] }} summary={heading}>
     {children}
-  </Box>
+  </Detail>
 )
 
 const Skills = () => {
