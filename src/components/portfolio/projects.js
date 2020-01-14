@@ -127,6 +127,9 @@ const Projects = () => {
           sx={{
             my: 4,
             px: [null, 3, 4],
+            a: {
+              color: "inherit",
+            },
           }}
           itemProps={{
             sx: {
@@ -156,7 +159,7 @@ const Projects = () => {
               >
                 Lighthouse audit
               </Link>
-              and{" "}
+              {" "}and{" "}
               <Link
                 href="https://developers.google.com/speed/pagespeed/insights/"
                 target="_blank"
