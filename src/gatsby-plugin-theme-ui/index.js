@@ -58,6 +58,7 @@ module.exports = {
       width: "100%",
       px: [3, 4],
       maxWidth: "780px",
+      boxSizing: "border-box"
     },
   },
   links: {
