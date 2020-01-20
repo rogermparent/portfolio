@@ -45,5 +45,6 @@ module.exports = {
         extraDirsToCache: [".linaria-cache"]
       }
     },
+    "gatsby-plugin-webpack-bundle-analyzer"
   ],
 }
