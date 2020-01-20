@@ -22,7 +22,6 @@ module.exports = {
     },
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
-    "gatsby-plugin-theme-ui",
     "gatsby-plugin-react-helmet",
     {
       resolve: `gatsby-plugin-manifest`,
