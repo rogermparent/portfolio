@@ -1,21 +1,27 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
-import { Text, Heading, Link } from "@theme-ui/components"
-import { Section } from "./shared"
+import React from "react"
+import { css, cx } from "linaria"
+import sx from "../../util/themed.js"
+import { Text, Heading, Link, Section } from "./shared"
 
 const PortfolioFooter = () => {
   return (
     <Section
       id="contact"
-      containerProps={{
-        sx: {
+      innerClass={css`
+        ${sx({
           my: 6,
           fontSize: [2, 3],
           width: "auto",
-        },
-      }}
+        })}
+      `}
     >
-      <Heading sx={{ my: 3 }}>Interested in working with me?</Heading>
+      <Heading
+        className={css`
+          ${sx({ my: 3 })}
+        `}
+      >
+        Interested in working with me?
+      </Heading>
       <Text>
         e-mail me at{" "}
         <Link href="mailto:rogermparent@gmail.com">rogermparent@gmail.com</Link>
