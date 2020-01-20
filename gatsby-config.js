@@ -39,6 +39,11 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
     `gatsby-plugin-preload-link-crossorigin`,
-    "gatsby-plugin-netlify-cache",
+    {
+      resolve: "gatsby-plugin-netlify-cache",
+      options: {
+        extraDirsToCache: [".linaria-cache"]
+      }
+    },
   ],
 }
