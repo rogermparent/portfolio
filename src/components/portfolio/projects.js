@@ -1,6 +1,5 @@
-import React from "react"
-import { css, cx } from "linaria"
-import sx from "../../util/themed.js"
+/** @jsx jsx */
+import { jsx } from "theme-ui"
 import { useMemo } from "react"
 import {
   Button,
@@ -11,11 +10,8 @@ import {
   Heading,
   Link,
   Card,
-  Paragraph,
-  List,
-  Section,
-  Detail,
-} from "./shared"
+} from "@theme-ui/components"
+import { Paragraph, List, Section, Detail } from "./shared"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
@@ -55,24 +51,20 @@ const Projects = () => {
   return (
     <Section
       id="projects"
-      className={css`
-        ${sx({
-          backgroundColor: "primary",
-          color: "primaryText",
-          py: 1,
-        })}
-      `}
+      sx={{
+        backgroundColor: "primary",
+        color: "primaryText",
+        py: 1,
+      }}
     >
-      <h2
-        className={css`
-          ${sx({
-            fontSize: [5, 6],
-            my: 5,
-          })}
-        `}
+      <Heading
+        sx={{
+          fontSize: [5, 6],
+          my: 5,
+        }}
       >
         Things I've Made
-      </h2>
+      </Heading>
 
       <Project
         name="Platinum Recipe Book"
@@ -124,30 +116,26 @@ const Projects = () => {
 
       <Container my={[4, 5]}>
         <Heading
-          className={css`
-            ${sx({
-              fontSize: [3, 4],
-            })}
-          `}
+          sx={{
+            fontSize: [3, 4],
+          }}
         >
           This portfolio is also an example of my work!
         </Heading>
         <List
-          className={css`
-            ${sx({
-              variant: "lists.unstyled",
-              my: 4,
-              px: [null, 3, 4],
-              a: {
-                color: "inherit",
-              },
-            })}
-          `}
-          itemClass={css`
-            ${sx({
+          variant="unstyled"
+          sx={{
+            my: 4,
+            px: [null, 3, 4],
+            a: {
+              color: "inherit",
+            },
+          }}
+          itemProps={{
+            sx: {
               my: 3,
-            })}
-          `}
+            },
+          }}
         >
           <DetailItem heading="Modern">
             Despite compiling to static HTML and CSS, this site is made with
@@ -170,8 +158,8 @@ const Projects = () => {
                 rel="noopener noreferrer"
               >
                 Lighthouse audit
-              </Link>{" "}
-              and{" "}
+              </Link>
+              {" "}and{" "}
               <Link
                 href="https://developers.google.com/speed/pagespeed/insights/"
                 target="_blank"
@@ -190,12 +178,10 @@ const Projects = () => {
           </DetailItem>
         </List>
         <Text
-          className={css`
-            ${sx({
-              textAlign: "center",
-              my: 3,
-            })}
-          `}
+          sx={{
+            textAlign: "center",
+            my: 3,
+          }}
         >
           <Button
             as="a"
@@ -203,13 +189,9 @@ const Projects = () => {
             href="https://github.com/rogermparent/portfolio"
             rel="noopener noreferrer"
             target="_blank"
-            className={css`
-              ${sx({
-                color: "white",
-                fontSize: [1, 2],
-                "&:visited": { color: "gray.3" },
-              })}
-            `}
+            sx={{
+              fontSize: [1, 2],
+            }}
           >
             See the source on GitHub!
           </Button>
@@ -219,17 +201,13 @@ const Projects = () => {
   )
 }
 
-const DetailItem = ({ className, heading, ...props }) => (
+const DetailItem = ({ sx, heading, ...props }) => (
   <Detail
-    className={cx(
-      className,
-      css`
-        ${sx({
-          fontSize: 2,
-          mb: 2,
-        })}
-      `
-    )}
+    sx={{
+      fontSize: 2,
+      mb: 2,
+      ...sx,
+    }}
     summary={heading}
     {...props}
   />
@@ -237,48 +215,32 @@ const DetailItem = ({ className, heading, ...props }) => (
 
 const Project = ({ children, name, image, repo, demo }) => (
   <Card
-    className={css`
-      ${sx({
-        fontSize: 0,
-        p: 1,
-        my: [3, 4],
-        mx: "auto",
-        maxWidth: "580px",
-      })}
-    `}
+    sx={{
+      fontSize: 0,
+      p: 1,
+      my: [3, 4],
+      mx: "auto",
+      maxWidth: "580px",
+    }}
   >
     <Box>
-      <Img
-        fluid={image}
-        className={css`
-          ${sx({ m: 1 })}
-        `}
-      />
-      <Box
-        className={css`
-          ${sx({ my: 3 })}
-        `}
-      >
+      <Img fluid={image} sx={{ m: 1 }} />
+      <Box sx={{ my: 3 }}>
         <Heading
           as="h3"
-          className={css`
-            ${sx({
-              variant: "theme.text.heading",
-              fontSize: [2, 3, 4],
-              textAlign: "center",
-            })}
-          `}
+          sx={{
+            fontSize: [2, 3, 4],
+            textAlign: "center",
+          }}
         >
           {name}
         </Heading>
         <Flex
-          className={css`
-            ${sx({
-              justifyContent: "center",
-              alignItems: "center",
-              a: { mx: 1 },
-            })}
-          `}
+          sx={{
+            justifyContent: "center",
+            alignItems: "center",
+            a: { mx: 1 },
+          }}
         >
           {repo && (
             <Link href={repo} target="_blank" rel="noopener noreferrer">
@@ -293,13 +255,7 @@ const Project = ({ children, name, image, repo, demo }) => (
         </Flex>
       </Box>
     </Box>
-    <Box
-      className={css`
-        ${sx({ mx: [3, 4] })}
-      `}
-    >
-      {children}
-    </Box>
+    <Box sx={{ mx: [3, 4] }}>{children}</Box>
   </Card>
 )
 

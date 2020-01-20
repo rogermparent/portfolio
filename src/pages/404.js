@@ -1,6 +1,7 @@
-import React from "react"
+/** @jsx jsx */
+import { jsx } from "theme-ui"
 import Layout from "../components/layout"
-import { Heading, Text, Link } from "../components/portfolio/shared.js"
+import { Heading, Text, Link } from "@theme-ui/components"
 
 export default () => {
   return (

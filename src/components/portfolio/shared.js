@@ -1,91 +1,47 @@
-import React from "react"
-import { css, cx } from "linaria"
-import { styled } from "linaria/react"
-import sx from "../../util/themed.js"
-
-export const Box = styled.div`
-  display: block;
-`
-
-export const Button = styled.button`
-  ${sx({ variant: "buttons.primary" })}
-`
-export const Text = styled.p`
-  ${sx({ variant: "styles.p" })}
-`
-export const Flex = styled.div`
-  ${sx({ display: "flex" })}
-`
-export const Container = styled.div`
-  ${sx({ variant: "layout.container" })}
-`
-export const Heading = styled.h2`
-  ${sx({ variant: "theme.text.heading" })}
-`
-export const Link = styled.a`
-  ${sx({ variant: "styles.a" })}
-`
-export const Card = styled.div`
-  ${sx({ variant: "cards.primary" })}
-`
+/** @jsx jsx */
+import { jsx } from "theme-ui"
+import { Text, Box, Container, Heading } from "@theme-ui/components"
 
 export const Detail = ({
   summary,
   summaryProps,
-  summaryClass,
-  className,
+  summarySx,
+  sx,
   contentProps,
+  contentSx,
   children,
   ...props
 }) => (
-  <details
-    className={cx(
-      css`
-        @keyframes open {
-          from {
-            opacity: 0;
-            bottom: 50%;
-          }
-          to {
-            opacity: 1;
-            bottom: 0;
-          }
-        }
-
-        ${sx({
-          "& .content": {
-            "*": { position: "relative" },
-            overflow: "hidden",
-          },
-          '&[open=""] .content > *': {
-            animation: "open 0.25s ease-out",
-          },
-          ...sx,
-        })}
-      `,
-      className
-    )}
+  <Box
+    as="details"
+    sx={{
+      "& .content": {
+        "*": { position: "relative" },
+        overflow: "hidden",
+        ...contentSx,
+      },
+      '&[open=""] .content > *': {
+        animation: "open 0.25s ease-out",
+      },
+      ...sx,
+    }}
     {...props}
   >
-    <Heading as="summary" className={summaryClass} {...summaryProps}>
+    <Heading as="summary" sx={summarySx} {...summaryProps}>
       {summary}
     </Heading>
-    <div className="content" {...contentProps}>
-      <div>{children}</div>
-    </div>
-  </details>
+    <Box className="content" {...contentProps}>
+      <Box>{children}</Box>
+    </Box>
+  </Box>
 )
 
-export const Paragraph = ({ className, ...props }) => (
-  <p
-    className={cx(
-      css`
-        ${sx({
-          my: 3,
-        })}
-      `,
-      className
-    )}
+export const Paragraph = props => (
+  <Text
+    as="p"
+    sx={{
+      my: 3,
+    }}
     {...props}
   />
 )
@@ -93,42 +49,43 @@ export const Paragraph = ({ className, ...props }) => (
 const ListItem = props =>
   props.children.type === "li" ? props.children : <li {...props} />
 
-export const List = ({
-  children,
-  itemProps,
-  itemClass,
-  as: Component = "ul",
-  ...props
-}) => {
+export const List = ({ children, itemProps, as = "ul", ...props }) => {
   return (
-    <Component {...props}>
+    <Box __themeKey="lists" as={as} {...props}>
       {Array.isArray(children) ? (
         children.map((child, i) => (
-          <ListItem key={i} className={itemClass} {...itemProps}>
+          <ListItem key={i} {...itemProps}>
             {child}
           </ListItem>
         ))
       ) : (
         <ListItem {...itemProps}>{children}</ListItem>
       )}
-    </Component>
+    </Box>
   )
 }
 
-export const Section = ({ children, innerClass, className, ...props }) => (
-  <section
-    className={cx(
-      css`
-        ${sx({
-          py: 1,
-        })}
-      `,
-      className
-    )}
+export const Section = ({
+  children,
+  containerProps,
+  containerSx,
+  ...props
+}) => (
+  <Box
+    as="section"
+    sx={{
+      py: 1,
+    }}
     {...props}
   >
-    <Container className={innerClass}>
+    <Container
+      sx={{
+        my: [4, 5],
+        ...containerSx,
+      }}
+      {...containerProps}
+    >
       {children}
     </Container>
-  </section>
+  </Box>
 )

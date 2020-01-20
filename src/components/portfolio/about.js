@@ -1,32 +1,26 @@
-import React from "react"
-import { css, cx } from "linaria"
-import sx from "../../util/themed.js"
-import { Heading, Paragraph, Section } from "./shared"
+/** @jsx jsx */
+import { jsx } from "theme-ui"
+import { Heading } from "@theme-ui/components"
+import { Paragraph, Section } from "./shared"
 
 const About = () => {
   return (
     <Section
-      className={css`
-        ${sx({
-          color: "background",
-          backgroundColor: "secondary",
-          lineHeight: "snug",
-        })}
-      `}
-      innerClass={css`
-        ${sx({
-          my: [4, 5, 6],
-        })}
-      `}
+      sx={{
+        color: "background",
+        backgroundColor: "secondary",
+        lineHeight: "snug",
+      }}
+      containerSx={{
+        my: [4, 5, 6],
+      }}
       id="about"
     >
       <Heading
-        className={css`
-          ${sx({
-            fontSize: [5, 6],
-            my: [4],
-          })}
-        `}
+        sx={{
+          fontSize: [5, 6],
+          my: [4],
+        }}
       >
         About Me
       </Heading>

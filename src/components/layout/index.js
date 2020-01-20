@@ -1,20 +1,15 @@
 import React from "react"
-import { css, cx } from "linaria"
-import sx from "../../util/themed.js"
+import { Styled } from "theme-ui"
 import Main from "./main"
 import "./global.css"
 import SEO from "../seo"
 
 const SiteLayout = ({ children, header, footer }) => {
   return (
-    <div
-      className={css`
-        ${sx({ variant: "styles.root" })}
-      `}
-    >
+    <Styled.root>
       <SEO />
       <Main>{children}</Main>
-    </div>
+    </Styled.root>
   )
 }
 

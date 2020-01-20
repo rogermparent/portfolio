@@ -1,40 +1,36 @@
-import React from "react"
-import { css, cx } from "linaria"
-import sx from "../../util/themed.js"
-import { Box, Text, Link, Heading, Paragraph, Section } from "./shared"
+/** @jsx jsx */
+import { jsx } from "theme-ui"
+import { Box, Text, Link, Heading } from "@theme-ui/components"
+import { Paragraph, Section } from "./shared"
 
 const Intro = () => (
   <Section
     id="intro"
-    className={css`
-      ${sx({
-        minHeight: "100vh",
-        fontSize: [2, 3],
-        lineHeight: "tight",
-        color: "text",
-        backgroundColor: "background",
+    sx={{
+      minHeight: "100vh",
+      fontSize: [2, 3],
+      lineHeight: "tight",
+      color: "text",
+      backgroundColor: "background",
 
-        display: "flex",
-        flexFlow: "column nowrap",
-        alignItems: "flex-start",
-        justifyContent: "center",
-        "@media print": {
-          minHeight: "unset",
-        },
-      })}
-    `}
+      display: "flex",
+      flexFlow: "column nowrap",
+      alignItems: "flex-start",
+      justifyContent: "center",
+      "@media print": {
+        minHeight: "unset",
+      },
+    }}
   >
     <Text>My name is</Text>
     <Heading
-      className={css`
-        ${sx({
-          fontWeight: "black",
-          fontSize: [6, 8],
-          whiteSpace: "nowrap",
-          lineHeight: "normal",
-          my: 2,
-        })}
-      `}
+      sx={{
+        fontWeight: "black",
+        fontSize: [6, 8],
+        whiteSpace: "nowrap",
+        lineHeight: "normal",
+        my: 2,
+      }}
     >
       Roger Parent
     </Heading>
@@ -48,18 +44,16 @@ const Intro = () => (
     </Paragraph>
     <Box
       as="nav"
-      className={css`
-        ${sx({
-          my: 3,
-          fontSize: [2, 3],
-          display: "flex",
-          flexFlow: "row nowrap",
-          mx: [-2, -3],
-          a: {
-            mx: [2, 3],
-          },
-        })}
-      `}
+      sx={{
+        my: 3,
+        fontSize: [2, 3],
+        display: "flex",
+        flexFlow: "row nowrap",
+        mx: [-2, -3],
+        a: {
+          mx: [2, 3],
+        },
+      }}
     >
       <Link href="#about">About</Link>
       <Link href="#skills">Skills</Link>

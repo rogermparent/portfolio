@@ -1,5 +1,5 @@
 import React from "react"
-import { Box } from "../../components/portfolio/shared.js"
+import { Box } from "@theme-ui/components"
 
 const SiteMain = ({ children }) => {
   return (

@@ -1,18 +1,10 @@
-import React from "react"
-import { css, cx } from "linaria"
-import sx from "../../util/themed.js"
-import { Box, Heading, Link, Paragraph, Section, Detail } from "./shared"
+/** @jsx jsx */
+import { jsx } from "theme-ui"
+import { Box, Heading, Link } from "@theme-ui/components"
+import { Paragraph, Section, Detail } from "./shared"
 
 const Skill = ({ heading, children }) => (
-  <Detail
-    className={css`
-      ${sx({ my: 4 })}
-    `}
-    summaryClass={css`
-      ${sx({ fontSize: [3, 4] })}
-    `}
-    summary={heading}
-  >
+  <Detail sx={{ my: 4 }} summarySx={{ fontSize: [3, 4] }} summary={heading}>
     {children}
   </Detail>
 )
@@ -29,13 +21,11 @@ const Skills = () => {
       }}
     >
       <Heading
-        className={css`
-          ${sx({
-            fontSize: 6,
-            textAlign: "center",
-            my: 5,
-          })}
-        `}
+        sx={{
+          fontSize: 6,
+          textAlign: "center",
+          my: 5,
+        }}
       >
         My Skills
       </Heading>

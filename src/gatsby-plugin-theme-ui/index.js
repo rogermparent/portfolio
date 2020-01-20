@@ -54,10 +54,7 @@ module.exports = {
       flex: "1",
     },
     container: {
-      mx: "auto",
-      width: "100%",
       px: [3, 4],
-      maxWidth: "780px",
     },
   },
   links: {
@@ -79,6 +76,10 @@ module.exports = {
       boxSizing: "border-box",
       fontSize: 0,
     },
+  },
+  sizes: {
+    ...preset.sizes,
+    container: "780px",
   },
   styles: {
     ...preset.styles,

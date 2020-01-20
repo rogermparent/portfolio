@@ -12,7 +12,6 @@ module.exports = {
     author: "Roger M. Parent",
   },
   plugins: [
-    "gatsby-plugin-linaria",
     {
       resolve: "gatsby-source-filesystem",
       options: {
