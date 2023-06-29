@@ -28,7 +28,9 @@ export const LandingSection = () => {
           A web developer with a passion for minimalism and the unorthodox.
         </span>
       </div>
-      <DownChevron />
+      <a href="#worked-on" className={styles.downChevronLink}>
+        <DownChevron />
+      </a>
     </section>
   );
 };

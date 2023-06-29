@@ -5,9 +5,9 @@ export const wrapper = style({
   padding: "2rem 1rem",
 });
 export const sectionHeading = style({
-  maxWidth: "60rem",
   margin: "2rem auto",
   fontSize: "1.8rem",
+  textAlign: "center",
   "@media": {
     [screens.sm]: {
       fontSize: "2rem",

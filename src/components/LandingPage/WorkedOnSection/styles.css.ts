@@ -1,7 +1,18 @@
 import { style } from "@vanilla-extract/css";
-import { screens, vars } from "../../../theme.css";
-export { wrapper, sectionHeading } from "../styles.css";
+import { screens } from "../../../theme.css";
+import { wrapper as genericWrapper } from "../styles.css";
+export { sectionHeading } from "../styles.css";
 
+export const wrapper = style([
+  genericWrapper,
+  {
+    minHeight: "100vh",
+    display: "flex",
+    flexFlow: "column nowrap",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+]);
 export const video = style({ maxWidth: "100%" });
 export const list = style({
   display: "flex",

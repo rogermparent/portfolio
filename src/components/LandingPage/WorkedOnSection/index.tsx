@@ -1,12 +1,6 @@
-import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
+import { StaticImage } from "gatsby-plugin-image";
 import React, { ReactNode } from "react";
 import * as styles from "./styles.css";
-const dvcOrgScreenshot = "../../../images/dvc-org-screenshot.png";
-const cmlDevScreenshot = "../../../images/cml-dev-screenshot.png";
-const iterativeAiScreenshot = "../../../images/iterative-ai-screenshot.png";
-
-/*
- */
 
 const Item: React.FC<{
   image: ReactNode;
@@ -20,10 +14,10 @@ const Item: React.FC<{
       <h3 className={styles.itemHeading}>{name}</h3>
       {image}
       <div className={styles.links}>
-        <a href={demoLink} target="_blank" className={styles.link}>
+        <a href={demoLink} target="_blank" className={styles.link} rel="noreferrer">
           Demo
         </a>{" "}
-        <a href={githubLink} target="_blank" className={styles.link}>
+        <a href={githubLink} target="_blank" className={styles.link} rel="noreferrer">
           GitHub
         </a>
       </div>
@@ -34,7 +28,7 @@ const Item: React.FC<{
 
 export const WorkedOnSection = () => {
   return (
-    <section className={styles.wrapper}>
+    <section className={styles.wrapper} id="worked-on">
       <h2 className={styles.sectionHeading}>What have I worked on?</h2>
       <ul className={styles.list}>
         <Item

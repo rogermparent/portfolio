@@ -1,14 +1,26 @@
 import { style } from "@vanilla-extract/css";
-export { wrapper, sectionHeading } from "../styles.css";
+import { screens, vars } from "../../../theme.css";
+import { wrapper as genericWrapper } from "../styles.css";
+export { sectionHeading } from "../styles.css";
+
+export const wrapper = style([
+  genericWrapper,
+  { backgroundColor: vars.colors.backgroundAlt },
+]);
 
 export const contactLink = style({
   textDecoration: "none",
   textAlign: "center",
   fontWeight: "bold",
   display: "block",
+  whiteSpace: "nowrap",
   padding: "1rem",
   margin: "0 auto",
-  fontSize: "1.5rem",
+  fontSize: "1rem",
+  "@media": {
+    [screens.sm]: { fontSize: "1.25rem" },
+    [screens.md]: { fontSize: "1.5rem" },
+  },
 });
 
 export const contactIcon = style({

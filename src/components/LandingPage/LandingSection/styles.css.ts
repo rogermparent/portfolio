@@ -45,6 +45,10 @@ const float = keyframes({
   "40%": { transform: "translate(0, 0px)" },
 });
 
+export const downChevronLink = style({
+  padding: "1rem",
+});
+
 export const downChevron = style({
   opacity: "25%",
   animationName: float,
