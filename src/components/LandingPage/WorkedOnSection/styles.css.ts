@@ -1,23 +1,8 @@
 import { style } from "@vanilla-extract/css";
 import { screens, vars } from "../../../theme.css";
+export { wrapper, sectionHeading } from "../styles.css";
 
-export const sectionHeading = style({
-  maxWidth: "60rem",
-  margin: "2rem auto",
-  fontSize: "1.8rem",
-  "@media": {
-    [screens.sm]: {
-      fontSize: "2rem",
-    },
-    [screens.md]: {
-      fontSize: "2.5rem",
-    },
-  },
-});
 export const video = style({ maxWidth: "100%" });
-export const wrapper = style({
-  margin: "1rem",
-});
 export const list = style({
   display: "flex",
   flexFlow: "column nowrap",
@@ -32,14 +17,8 @@ export const list = style({
 });
 export const item = style({
   padding: "1rem 0.5rem",
-  borderBottom: "1px solid",
-  borderColor: vars.colors.body,
-  ":last-of-type": {
-    borderBottom: "none",
-  },
   "@media": {
     [screens.lg]: {
-      borderBottom: "none",
       flexBasis: "50%",
     },
   },
