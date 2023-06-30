@@ -1,9 +1,10 @@
 import { style } from "@vanilla-extract/css";
-import { screens, vars } from "../../../theme.css";
+import { screens, styleLinks, vars } from "../../../theme.css";
 import { wrapper as genericWrapper } from "../styles.css";
 export { sectionHeading } from "../styles.css";
 
 export const wrapper = style([
+  styleLinks,
   genericWrapper,
   { backgroundColor: vars.colors.backgroundAlt },
 ]);

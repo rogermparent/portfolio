@@ -1,10 +1,11 @@
 import { style } from "@vanilla-extract/css";
-import { screens } from "../../../theme.css";
+import { screens, styleLinks } from "../../../theme.css";
 import { wrapper as genericWrapper } from "../styles.css";
 export { sectionHeading } from "../styles.css";
 
 export const wrapper = style([
   genericWrapper,
+  styleLinks,
   {
     minHeight: "100vh",
     display: "flex",
@@ -35,18 +36,19 @@ export const item = style({
   },
 });
 export const itemHeading = style({
-  fontSize: "1.25rem",
+  fontSize: "1.5rem",
   margin: "0.5rem 0",
   fontWeight: "bolder",
   "@media": {
     [screens.sm]: {
-      fontSize: "1.5rem",
+      fontSize: "1.75rem",
     },
   },
 });
 export const links = style({ textAlign: "center" });
 export const link = style({
+  fontSize: "1.2rem",
   display: "inline-block",
-  padding: "0.25rem",
+  padding: "0.3rem",
   fontWeight: "bold",
 });

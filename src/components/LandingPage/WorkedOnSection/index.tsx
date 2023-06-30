@@ -11,13 +11,25 @@ const Item: React.FC<{
 }> = ({ name, description, githubLink, demoLink, image }) => {
   return (
     <li className={styles.item}>
-      <h3 className={styles.itemHeading}>{name}</h3>
-      {image}
+      <a href={demoLink} target="_blank" rel="noreferrer">
+        <h3 className={styles.itemHeading}>{name}</h3>
+        {image}
+      </a>
       <div className={styles.links}>
-        <a href={demoLink} target="_blank" className={styles.link} rel="noreferrer">
+        <a
+          href={demoLink}
+          target="_blank"
+          className={styles.link}
+          rel="noreferrer"
+        >
           Demo
         </a>{" "}
-        <a href={githubLink} target="_blank" className={styles.link} rel="noreferrer">
+        <a
+          href={githubLink}
+          target="_blank"
+          className={styles.link}
+          rel="noreferrer"
+        >
           GitHub
         </a>
       </div>

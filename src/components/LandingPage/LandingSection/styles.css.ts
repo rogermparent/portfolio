@@ -46,11 +46,14 @@ const float = keyframes({
 });
 
 export const downChevronLink = style({
+  opacity: "40%",
   padding: "1rem",
+  color: vars.colors.link,
+  transition: "all 0.5s",
+  ":hover": { opacity: "90%", transform: "scale(1.1)" },
 });
 
 export const downChevron = style({
-  opacity: "25%",
   animationName: float,
   animationDuration: "4s",
   animationTimingFunction: "ease-in-out",

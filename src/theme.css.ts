@@ -2,6 +2,7 @@ import {
   createGlobalTheme,
   globalStyle,
   assignVars,
+  style,
 } from "@vanilla-extract/css";
 import { colors, lightMode } from "./colors.css";
 
@@ -30,16 +31,18 @@ export const vars = {
   ...colorVars,
 };
 
-globalStyle("a", {
-  color: colors.link,
+export const styleLinks = style({});
+
+globalStyle(`${styleLinks} a`, {
+  color: colorVars.colors.link,
 });
 
-globalStyle("a:visited", {
-  color: colors.link_visited,
+globalStyle(`${styleLinks} a:visited`, {
+  color: colorVars.colors.link_visited,
 });
 
-globalStyle("a:hover", {
-  color: colors.link_hover,
+globalStyle(`${styleLinks} a:hover`, {
+  color: colorVars.colors.link_hover,
 });
 
 globalStyle(":root", {
