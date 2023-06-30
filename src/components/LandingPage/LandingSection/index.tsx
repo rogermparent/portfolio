@@ -25,7 +25,7 @@ export const LandingSection = () => {
         <span>Hi! My name is</span>
         <h1 className={styles.name}>Roger M. Parent</h1>
         <span>
-          A web developer with a passion for minimalism and the unorthodox.
+          A web developer with a passion for minimalism and creative solutions.
         </span>
       </div>
       <a href="#worked-on" className={styles.downChevronLink}>
