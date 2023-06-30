@@ -46,5 +46,5 @@ export const lightMode = {
   body: palette.raisin_black,
   link: palette.light_blue_1,
   link_visited: palette.peach_1,
-  link_hover: palette.cherry_blossom_pink_1,
+  link_hover: palette.cherry_blossom_pink_2,
 };
