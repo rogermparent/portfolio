@@ -7,7 +7,12 @@ const ContactLink: React.FC<{ href: string; children: ReactNode }> = ({
   href,
   children,
 }) => (
-  <a href={href} className={styles.contactLink}>
+  <a
+    href={href}
+    className={styles.contactLink}
+    target="_blank"
+    rel="noreferrer"
+  >
     {children}
   </a>
 );
