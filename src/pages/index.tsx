@@ -3,6 +3,7 @@ import type { HeadFC, PageProps } from "gatsby";
 
 import DefaultLayout from "../layouts/default";
 import LandingPage from "../components/LandingPage";
+import SEO from "../components/SEO";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -14,4 +15,4 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Roger M. Parent</title>;
+export const Head: HeadFC = () => <SEO />;

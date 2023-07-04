@@ -28,7 +28,11 @@ export const LandingSection = () => {
           A web developer with a passion for minimalism and creative solutions.
         </span>
       </div>
-      <a href="#worked-on" className={styles.downChevronLink}>
+      <a
+        href="#worked-on"
+        className={styles.downChevronLink}
+        aria-label="Go to next page"
+      >
         <DownChevron />
       </a>
     </section>
