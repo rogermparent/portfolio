@@ -14,7 +14,7 @@ export const wrapper = style([
     alignItems: "center",
   },
 ]);
-export const video = style({ maxWidth: "100%" });
+export const image = style({ maxWidth: "100%" });
 export const list = style({
   display: "flex",
   flexFlow: "column nowrap",

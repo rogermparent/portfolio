@@ -44,13 +44,26 @@ export const WorkedOnSection = () => {
       <h2 className={styles.sectionHeading}>What have I worked on?</h2>
       <ul className={styles.list}>
         <Item
+          name="Gatsby Recipe Book"
+          demoLink="https://recipes.rogermparent.dev"
+          githubLink="https://github.com/rogermparent/gatsby-recipe-book"
+          description="My personal project, an aspirational recipe website using a custom local-first CMS to manage a recipe book."
+          image={
+            <StaticImage
+              className={styles.image}
+              alt=""
+              src="../../../images/gatsby-recipe-book-screenshot.png"
+            />
+          }
+        />
+        <Item
           name="dvc.org"
           demoLink="https://dvc.org"
           githubLink="https://github.com/iterative/dvc.org"
           description="The website for Iterative's popular open-source Machine Learning tool, DVC. Check out the slick landing page!"
           image={
             <StaticImage
-              className={styles.video}
+              className={styles.image}
               alt=""
               src="../../../images/dvc-org-screenshot.png"
             />
@@ -63,7 +76,7 @@ export const WorkedOnSection = () => {
           description="Another website for Iterative, built from the ground up. Has a unique feature to seamlessly switch between three different versions of content."
           image={
             <StaticImage
-              className={styles.video}
+              className={styles.image}
               alt=""
               src="../../../images/cml-dev-screenshot.png"
             />
@@ -76,7 +89,7 @@ export const WorkedOnSection = () => {
           description="Iterative's company website featuring the company blog which implements an advanced content storage system that mitigates the problem of storing images in a content-as-code setup."
           image={
             <StaticImage
-              className={styles.video}
+              className={styles.image}
               alt=""
               src="../../../images/iterative-ai-screenshot.png"
             />
