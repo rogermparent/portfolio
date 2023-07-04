@@ -3,7 +3,7 @@ import type { GatsbyConfig } from "gatsby";
 const config: GatsbyConfig = {
   siteMetadata: {
     title: "Roger Parent",
-    siteUrl: "https://www.rogermparent.dev",
+    siteUrl: "https://rogermparent.dev",
   },
   graphqlTypegen: true,
   plugins: [
