@@ -2,7 +2,7 @@ import { style } from "@vanilla-extract/css";
 import { screens } from "../../theme.css";
 
 export const wrapper = style({
-  padding: "2rem 1rem",
+  padding: "4rem 1rem 5rem",
 });
 export const sectionHeading = style({
   margin: "2rem auto",
